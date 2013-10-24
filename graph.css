@@ -1,0 +1,14 @@
+path, rect {
+	shape-rendering: crispEdges;
+}
+
+body, div, html {
+	margin: 0;
+	padding: 0;
+}
+
+#progress {
+	font-size: 8px;
+	padding-left: 10px;
+	padding-top: 5px;
+}
