@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<style>
+h1 {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 3em;
+}
+
+#slide-0 h1, #slide-9 h1 {
+    font-size: 4em;
+    margin-top: 3em;
+}
+
+#slide-0 .script {
+	text-align: center;
+}
+
+.slide {
+    margin-top: 2em;
+}
+
+table {
+    font-size: 1.5em;	
+}
+
+table th, table td {
+    line-height: 18px;
+    padding: 20px 20px 19px;
+    text-align: left;
+}
+
+i {
+    font-style: normal;
+    color: #AAA;
+}
+
+.script b {
+	padding: 0;
+}
+
+b {
+    padding: 4px 11px;
+}
+
+b.green {
+    border: 3px solid #46A546;
+    color: #404040;
+    padding: 4px 8px;
+}
+
+b.blue {
+    border: 3px solid #049CDB;
+    color: #404040;
+    padding: 4px 8px;
+}
+
+th.first {
+    width: 200px;
+}
+
+.two th.first {
+	width: 50%;
+}
+
+div.script {
+margin-top: 2em;
+font-size: 1.5em;
+line-height: 1.3em;
+color: #505050;
+display: none;
+}
+.slide {
+    display: none;
+}
+
+</style>
+<script>
+var cur_slide = 0;
+var max_slide = 9;
+$(document).keydown(function(e){
+	if (e.keyCode == 37) {
+        if (cur_slide > 0) { 
+           $('#slide-' + cur_slide).hide();
+           cur_slide--;
+           $('#slide-' + cur_slide).show();
+        }
+    }
+    if (e.keyCode == 39 || e.keyCode == 32 || e.keyCode == 13) {
+        if (cur_slide < max_slide) { 
+           $('#slide-' + cur_slide).hide();
+           cur_slide++;
+           $('#slide-' + cur_slide).show();
+        }
+    }
+});
+
+</script>
+</head>
+<body>
+<div class="container span12">
+    <div id="slide-0" class="slide">
+    <h1>Simpson's paradox</h1>
+    <div class="script">
+    Используйте ←, → для переключения между слайдами
+    </div>
+	
+	</div>
+    
+	
+	
+    <div id="slide-1" class="slide hide">
+    <h1>Kidney stones treatment</h1>
+    <table class="bordered-table">
+    <thead>
+        <tr>
+            <th class="first"></th><th>Treatment A</th><th>Treatment B</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><th>Small Stones</th><td>81/87</td><td>234/270</td></tr>
+        <tr><th>Large Stones</th><td>192/263</td><td>55/80</td></tr>
+    </tbody>
+    </table>
+    
+    <div class="script">
+    Это пример из реальных данных о лечении пациентов с камнями в почках.
+    В таблице сравниваются два метода лечения <b>A</b> и <b>B</b>. Дробь показывает отношение
+    случаев успешного лечения к общему числу случаев. 
+    </div>
+    
+    </div>
+    
+    <div id="slide-2" class="slide hide">
+    <h1>What is better to choose?</h1>
+    <table class="bordered-table">
+    <thead>
+        <tr>
+            <th class="first"></th><th>Treatment A</th><th>Treatment B</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><th>Small Stones</th><td><b>93%</b> <i>81/87</i></td><td><b>87%</b> <i>234/270</i></td></tr>
+        <tr><th>Large Stones</th><td><b>73%</b> <i>192/263</i></td><td><b>69%</b> <i>55/80</i></td></tr>
+    </tbody>
+    </table>
+    <div class="script">
+    Сравним два метода лечения. Какой из них эффективнее?
+    </div>
+    </div>
+    
+    <div id="slide-3" class="slide hide">
+    <h1>Treatment A is better</h1>
+    <table class="bordered-table">
+    <thead>
+        <tr>
+            <th class="first"></th><th>Treatment A</th><th>Treatment B</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><th>Small Stones</th><td><b class="green">93%</b> <i>81/87</i></td><td><b>87%</b> <i>234/270</i></td></tr>
+        <tr><th>Large Stones</th><td><b class="green">73%</b> <i>192/263</i></td><td><b>69%</b> <i>55/80</i></td></tr>
+    </tbody>
+    </table>
+        <div class="script">
+    Независимо от размера камней лечение <b>A</b> оказывается эффективнее.
+    </div>
+    </div>
+    
+    <div id="slide-4" class="slide hide">
+    <h1>Let's compute total numbers</h1>
+    <table class="bordered-table">
+    <thead>
+        <tr>
+            <th class="first"></th><th>Treatment A</th><th>Treatment B</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><th>Small Stones</th><td><b class="green">93%</b> <i>81/87</i></td><td><b>87%</b> <i>234/270</i></td></tr>
+        <tr><th>Large Stones</th><td><b class="green">73%</b> <i>192/263</i></td><td><b>69%</b> <i>55/80</i></td></tr>
+        <tr><th>Total</th><td>273/350</td><td>289/350</td></tr>
+    </tbody>
+    </table>
+    <div class="script">
+    Посчитаем общее число.
+    </div>
+    </div>
+    
+    <div id="slide-5" class="slide hide">
+    <h1>What do you say now?</h1>
+    <table class="bordered-table">
+    <thead>
+        <tr>
+            <th class="first"></th><th>Treatment A</th><th>Treatment B</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><th>Small Stones</th><td><b class="green">93%</b> <i>81/87</i></td><td><b>87%</b> <i>234/270</i></td></tr>
+        <tr><th>Large Stones</th><td><b class="green">73%</b> <i>192/263</i></td><td><b>69%</b> <i>55/80</i></td></tr>
+        <tr><th>Total</th><td><b>78%</b> <i>273/350</i></td><td><b class="green">83%</b> <i>289/350</i></td></tr>
+    </tbody>
+    </table>
+    <div class="script">
+    Лечение <b>B</b> оказывается более эффективным! Если мы рассматриваем отдельно маленькие
+	или большие камни, оказывается, что лечение <b>A</b> более эффективно в обоих случаях.
+	Если мы смотрим на общую статистику, то более эффективно лечение <b>B</b>.
+	Это противоречит здравому смыслу.
+    </div>
+    </div>
+    
+    <div id="slide-6" class="slide hide">
+    <h1>Explanation</h1>
+    <table class="bordered-table">
+    <thead>
+        <tr>
+            <th class="first"></th><th>Treatment A</th><th>Treatment B</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><th>Small Stones</th><td><b>93%</b> <i>81/87</i></td><td><b class="blue">87%</b> <i>234/270</i></td></tr>
+        <tr><th>Large Stones</th><td><b class="blue">73%</b> <i>192/263</i></td><td><b>69%</b> <i>55/80</i></td></tr>
+        <tr><th>Total</th><td><b>78%</b> <i>273/350</i></td><td><b>83%</b> <i>289/350</i></td></tr>
+    </tbody>
+    </table>
+    <div class="script">
+    Проблема кроется в существенно отличающемся размере выборок. Пациентов с маленькими
+    камнями гораздо чаще лечили с помощью <b>B</b>, а пациентов с большими с помощью <b>A</b>. 
+	В результате наибольший вклад в итоговую эффективность вносят выделенные синим группы.
+    Размер камней оказывает большее влияние на результат, чем выбор лечения. Лечение <b>A</b>
+	уступает лечению <b>B</b> в итоговом результате не потому, что оно менее эффективно, а
+	потому что применялось в более тяжелых случаях.
+    </div>
+    </div>
+    
+    <div id="slide-7" class="slide hide">
+    <h1>Other way</h1>
+    <table class="bordered-table">
+    <thead>
+        <tr>
+            <th class="first"></th><th>Bart</th><th>Lisa</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><th>1<sup>st</sup> week</th><td><b class="green">90%</b> <i>9/10</i></td><td><b>60%</b> <i>60/100</i></td></tr>
+        <tr><th>2<sup>nd</sup> week</th><td><b class="green">30%</b> <i>30/100</i></td><td><b>10%</b> <i>1/10</i></td></tr>
+        <tr><th>Total</th><td><b>35%</b> <i>39/110</i></td><td><b class="green">55%</b> <i>61/110</i></td></tr>
+    </tbody>
+    </table>
+    <div class="script">
+    Всегда ли следует предпочитать результаты, полученные для отдельных групп, итоговым? Нет, не всегда!
+    В данном примере Лиза и Барт выполняют определённую работу, например, проверяют статьи. В каждую из недель
+    Барт показал большую эффективность, чем Лиза, однако в целом Лиза выполняет работу значительно лучше, чем Барт.
+    Более подробно для математиков: <a href="http://bayes.cs.ucla.edu/R264.pdf">http://bayes.cs.ucla.edu/R264.pdf</a>
+	</div>
+    </div>
+	
+	<div id="slide-8" class="slide hide">
+    <h1>Berkeley gender bias case</h1>
+    <table class="bordered-table two">
+	<thead>
+        <tr>
+            <th class="first"></th><th>Admitted</th>
+        </tr>
+    </thead>
+	<tbody>
+	<tr><th>Men</th><td>44%</td></tr>
+	<tr><th>Women</th><td>35%</td></tr>
+	</tbody>
+	</table>
+
+    <div class="script">
+	Эта статистика, отображающая процент поступивших из подававших заявления в Беркли, 
+	даже стала предметом судебных разбирательств. Университет обвинили в дискриминации, так как
+	эти цифры явно показывают, что предпочтения отдавались мужчинам.
+	Однако если рассмотреть отдельно каждый факультет, то окажется, что ни в одном случае не было
+	статистического значимого отклонения в пользу мужчин и даже, наоборот, на нескольких факультетах
+	было значимое отклонение в пользу женщин. Причины те же, что и в случае с камнями в почках.
+    </div>
+</div>
+    <div id="slide-9" class="slide hide">
+		<h1 class="big">Never trust statistics</h1>
+    <div class="script">
+    Вывод: никогда не доверяйте голым статистическим данным, даже если они даны в таком, казалось бы,
+	очевидном виде как мужчины 44%, женщины 35%.
+    </div>
+    </div>
+    
+</div>
+<script type="text/javascript">
+    $('#slide-0').show();
+</script>
+</body>
+</html>
