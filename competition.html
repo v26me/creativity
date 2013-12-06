@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="jquery.js"></script>	
+	<style>
+		.names {
+			font-size: 20px;
+			margin-bottom: 40px;
+		}
+		.active {
+			color: green;
+			text-decoration: underline;
+		}
+		#a_choose, #v_choose, .colo {
+			cursor: pointer;
+		}		
+		.bl, .red, .yab, .milk, .lgre, .dgre {
+			width: 50px;
+			line-height: 50px;
+			font-size: 20px;
+			font-weight: bold;
+			margin: 5px;
+			color: #fff;
+			border-radius: 25px;
+		}
+		.red {
+			background-color: red;			
+		}
+		.lgre {
+			background-color: lightgreen;			
+		}
+		.dgre {
+			background-color: darkgreen;
+		}
+		.bl {
+			background-color: black;
+		}		
+		.hist {
+			text-align: center;
+		}
+		.yab {
+			background-image: url('apple.png');
+		}
+		.milk {
+			background-image: url('milk.png');
+		}		
+	</style>	
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="span4">
+			<h1>Результаты</h1>
+			<table class="table">
+			<tr>
+				<td>Андрюша:</td>
+				<td><span id="a_score">0</span></td>
+			</tr>
+			<tr>
+			<td>
+				Ваня:
+			</td>
+			<td><span id="v_score">0</span></td>
+			</tr>
+			</table>
+			<h1>История</h1>
+			<div class="row">
+				<div class="span2 a_hist"></div>
+				<div class="span2 v_hist"></div>
+			</div>
+		</div>
+		<div class="span12">
+			<h1>Управление</h1>
+			<div class="row names">
+				<div id="a_choose" class="span active">Андрюша</div>
+				<div id="v_choose" class="span">Ваня</div>
+			</div>
+			<div class="row">
+				<div id="yab" data-points="15" class="span yab colo">&nbsp;</div>
+				<div id="bl" data-points="13" class="span bl colo">&nbsp;</div>
+				<div id="red" data-points="11" class="span red colo">&nbsp;</div>
+				<div id="lgre" data-points="9" class="span lgre colo">&nbsp;</div>
+				<div id="dgre" data-points="7" class="span dgre colo">&nbsp;</div>				
+				<div id="milk" data-points="1" class="span milk colo">&nbsp;</div>				
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var score = {};
+	score.v = 0;
+	score.a = 0;
+	var cur = 0;
+	var player = 'a';
+	$('#a_choose').click(function() {
+		$('#a_choose').toggleClass('active');
+		$('#v_choose').toggleClass('active');
+		player = 'a';
+	});
+	$('#v_choose').click(function() {
+		$('#a_choose').toggleClass('active');
+		$('#v_choose').toggleClass('active');
+		player = 'v';
+	});
+	$('.colo').click(function() {
+		cur = $(this).attr('data-points') * 1;
+		score[player] = score[player] + cur;
+		if ($(this).hasClass('lgre')) {
+			$('.' + player + '_hist').prepend($('<div />').addClass('lgre').addClass('hist').html(cur));
+		}
+		if ($(this).hasClass('red')) {
+			$('.' + player + '_hist').prepend($('<div />').addClass('red').addClass('hist').html(cur));
+		}
+		if ($(this).hasClass('dgre')) {
+			$('.' + player + '_hist').prepend($('<div />').addClass('dgre').addClass('hist').html(cur));
+		}
+		if ($(this).hasClass('milk')) {
+			$('.' + player + '_hist').prepend($('<div />').addClass('milk').addClass('hist').html(cur));
+		}
+		if ($(this).hasClass('bl')) {
+			$('.' + player + '_hist').prepend($('<div />').addClass('bl').addClass('hist').html(cur));
+		}
+		if ($(this).hasClass('yab')) {
+			$('.' + player + '_hist').prepend($('<div />').addClass('yab').addClass('hist').html(cur));
+		}
+		
+		$('#a_score').html(score['a']);
+		$('#v_score').html(score['v']);
+	})
+
+
+</script>
+</body>
+</html>

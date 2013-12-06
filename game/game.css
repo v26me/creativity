@@ -1,0 +1,45 @@
+.centered {
+	text-align: center;
+}
+
+.container {
+	margin-top: 20px;
+}
+
+div.saved {
+	margin-top: 10px;
+}
+
+.fa-heart {
+	color: #FF4B4B;
+}
+
+line.grid, rect.frame, rect.sel_frame {
+	stroke: #999;
+	shape-rendering: crispEdges;
+}
+
+rect.frame {
+	fill: #fff;
+}
+
+rect.possible {
+	fill: #d5ffd5;
+}
+
+rect.possible:hover {
+	fill: #88f;
+}
+
+rect.placed, rect.saved {
+	fill: #22f;
+}
+
+rect.sel_frame {
+	fill: #75ff75;
+}
+
+g.sel:hover rect.frame {
+	fill: #d5ffd5;
+}
+

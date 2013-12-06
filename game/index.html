@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Creativity study</title>
+	<script src="jquery.js"></script>	
+	<script src="d3.js" charset="utf-8"></script>	
+	<script src="game.js"></script>		
+	<link rel="stylesheet" href="bootstrap.min.css">  
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.css">  
+	<link rel="stylesheet" href="game.css">  
+</head>
+<body>
+	<!--			
+	(-) Make send to the server functionality
+		(-) Info about perso
+		(-) Log
+		(-) Selected
+	(-) Enjoy
+	-->
+	<div class="container">
+		<div class="intro hide">
+			<div class="jumbotron">
+				<h1>Welcome to the Creativity Study</h1>
+				<p>Thank you for taking part in this study.
+				   Your goal is to draw different shapes and to find intersting or beatiful figures.
+				</p>
+				<p>The figures are composed of connected squares. You start with a blank grid and can add one square at a time
+				if it is connected with the others. Once you reach 10 squares you can save your figure or start to draw again.
+				</p>
+				<p>
+				Although the rules seem simple, there are many interesting shapes that you could draw.
+				At the last stage of the expirement you will see all the shapes you have saved and would be asked to choose
+				the best among them.
+				</p>
+				<p>Please spend at least 7-8 minutes on the experiment</p>
+				<p class="centered"><button type="button" class="go-next btn btn-success btn-lg">Start the experiment</button></p>
+			</div>
+		</div>
+
+		<div class="perso hide">
+			<h2>Please, tell us a bit about you</h2>
+			<form id="person" role="form">
+			    <div class="form-group">
+			    	<label for="formName">Name or nickname</label>
+			    	<input type="text" name="name" class="form-control" id="formName" placeholder="Enter your name or nickname">
+			  	</div>
+			  	<div class="form-group">
+				    <label for="formAge">Age</label>
+				    <input type="text" name="age" class="form-control" id="formAge" placeholder="Enter your age">
+		        </div>			  			 	
+				<div class="form-group">
+					<label>Gender</label>
+					<div class="radio">
+					    <label>
+						<input type="radio" name="sex" id="formFemale" value="0" checked>
+						Female
+						</label>
+					</div>
+					<div class="radio">				  
+					    <label>
+					    	<input type="radio" name="sex" id="formMale" value="1">
+					    	Male
+					    </label>
+					</div>
+				</div>
+			    <button type="button" class="btn btn-success go-next">Continue</button>
+			</form>
+		</div>
+
+		<div class="main hide">
+			<div class="row">
+				<div class="game col-md-8">					
+					<div class="grid">
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">Experiment menu</div>
+						<div class="panel-body">
+							<p>
+								Squares left: <span id="sq_left">10</span>
+							</p>
+							<p class="panel-buttons">
+								<button type="button" disabled="disabled" class="btn btn-sm btn-success btn-save">Save the figure</button>
+								<button type="button" disabled="disabled" class="btn btn-sm btn-info btn-again">Start again</button>
+							</p>
+							<p>
+								
+							</p>
+							<hr />
+							<p>
+								Time of the experiment: <span id="time_pass">00:00<span>
+							</p>
+							<p>
+								<button type="button" class="btn btn-sm btn-warning go-next">End the experiment</button>
+							</p>
+							<hr />
+							Saved figures
+							<div class="saved">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="gallery hide">
+			<h1 class="centered">Choose the most interesting and beautiful shapes</h1>
+			<div class="selected">
+			</div>
+			<p class="centered">
+				<button type="button" class="btn btn-success btn-lg go-next">Save my choise</button>
+			</p>
+		</div>
+
+		<div class="thanks hide">
+			<h1 class="centered">Thank you for participating in the experiment! <i class="fa fa-heart"></i></h1>
+		</div>
+	</div>
+</body>
+<html>
