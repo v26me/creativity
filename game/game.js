@@ -28,7 +28,7 @@ Game = {
 		this.figuresNum = 0;
 		this.firstTime = true;
 		this.savedFigures = 0;		
-		this.sqLimit = 3;
+		this.sqLimit = 10;
 		
 		this.initMap(1);
 		this.drawGrid();
