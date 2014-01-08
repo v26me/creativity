@@ -43,3 +43,6 @@ g.sel:hover rect.frame {
 	fill: #d5ffd5;
 }
 
+#tip {
+	margin-bottom: -50px;
+}

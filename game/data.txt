@@ -1,0 +1,653 @@
+1389039127
+array (
+  'person' => 'name=&age=&sex=0',
+  'moves' => 
+  array (
+    0 => 
+    array (
+      'action' => 'put',
+      'time' => '905',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '9',
+      ),
+    ),
+    1 => 
+    array (
+      'action' => 'put',
+      'time' => '1404',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '8',
+      ),
+    ),
+    2 => 
+    array (
+      'action' => 'put',
+      'time' => '1825',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '7',
+      ),
+    ),
+    3 => 
+    array (
+      'action' => 'put',
+      'time' => '2231',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '6',
+      ),
+    ),
+    4 => 
+    array (
+      'action' => 'put',
+      'time' => '2699',
+      'params' => 
+      array (
+        'x' => '10',
+        'y' => '6',
+      ),
+    ),
+    5 => 
+    array (
+      'action' => 'put',
+      'time' => '3120',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '6',
+      ),
+    ),
+    6 => 
+    array (
+      'action' => 'put',
+      'time' => '3588',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '7',
+      ),
+    ),
+    7 => 
+    array (
+      'action' => 'put',
+      'time' => '3962',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '8',
+      ),
+    ),
+    8 => 
+    array (
+      'action' => 'put',
+      'time' => '4743',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '9',
+      ),
+    ),
+    9 => 
+    array (
+      'action' => 'put',
+      'time' => '7878',
+      'params' => 
+      array (
+        'x' => '10',
+        'y' => '8',
+      ),
+    ),
+    10 => 
+    array (
+      'action' => 'save',
+      'time' => '8783',
+    ),
+    11 => 
+    array (
+      'action' => 'put',
+      'time' => '10031',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '9',
+      ),
+    ),
+    12 => 
+    array (
+      'action' => 'put',
+      'time' => '10608',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '8',
+      ),
+    ),
+    13 => 
+    array (
+      'action' => 'put',
+      'time' => '10983',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '7',
+      ),
+    ),
+    14 => 
+    array (
+      'action' => 'put',
+      'time' => '11454',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '6',
+      ),
+    ),
+    15 => 
+    array (
+      'action' => 'put',
+      'time' => '11922',
+      'params' => 
+      array (
+        'x' => '10',
+        'y' => '6',
+      ),
+    ),
+    16 => 
+    array (
+      'action' => 'put',
+      'time' => '13669',
+      'params' => 
+      array (
+        'x' => '10',
+        'y' => '8',
+      ),
+    ),
+    17 => 
+    array (
+      'action' => 'put',
+      'time' => '15104',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '8',
+      ),
+    ),
+    18 => 
+    array (
+      'action' => 'put',
+      'time' => '15588',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '7',
+      ),
+    ),
+    19 => 
+    array (
+      'action' => 'put',
+      'time' => '16586',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '9',
+      ),
+    ),
+    20 => 
+    array (
+      'action' => 'put',
+      'time' => '17694',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '10',
+      ),
+    ),
+    21 => 
+    array (
+      'action' => 'again',
+      'time' => '21360',
+    ),
+    22 => 
+    array (
+      'action' => 'put',
+      'time' => '22358',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '9',
+      ),
+    ),
+    23 => 
+    array (
+      'action' => 'put',
+      'time' => '22982',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '8',
+      ),
+    ),
+    24 => 
+    array (
+      'action' => 'put',
+      'time' => '23450',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '7',
+      ),
+    ),
+    25 => 
+    array (
+      'action' => 'put',
+      'time' => '24417',
+      'params' => 
+      array (
+        'x' => '10',
+        'y' => '7',
+      ),
+    ),
+    26 => 
+    array (
+      'action' => 'put',
+      'time' => '25057',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '10',
+      ),
+    ),
+    27 => 
+    array (
+      'action' => 'put',
+      'time' => '25743',
+      'params' => 
+      array (
+        'x' => '10',
+        'y' => '10',
+      ),
+    ),
+    28 => 
+    array (
+      'action' => 'put',
+      'time' => '26383',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '7',
+      ),
+    ),
+    29 => 
+    array (
+      'action' => 'put',
+      'time' => '26929',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '10',
+      ),
+    ),
+    30 => 
+    array (
+      'action' => 'put',
+      'time' => '28551',
+      'params' => 
+      array (
+        'x' => '12',
+        'y' => '7',
+      ),
+    ),
+    31 => 
+    array (
+      'action' => 'put',
+      'time' => '29082',
+      'params' => 
+      array (
+        'x' => '12',
+        'y' => '10',
+      ),
+    ),
+    32 => 
+    array (
+      'action' => 'save',
+      'time' => '32217',
+    ),
+    33 => 
+    array (
+      'action' => 'put',
+      'time' => '34666',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '9',
+      ),
+    ),
+    34 => 
+    array (
+      'action' => 'put',
+      'time' => '35025',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '8',
+      ),
+    ),
+    35 => 
+    array (
+      'action' => 'put',
+      'time' => '35602',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '7',
+      ),
+    ),
+    36 => 
+    array (
+      'action' => 'put',
+      'time' => '36539',
+      'params' => 
+      array (
+        'x' => '10',
+        'y' => '7',
+      ),
+    ),
+    37 => 
+    array (
+      'action' => 'put',
+      'time' => '37490',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '10',
+      ),
+    ),
+    38 => 
+    array (
+      'action' => 'put',
+      'time' => '40158',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '7',
+      ),
+    ),
+    39 => 
+    array (
+      'action' => 'put',
+      'time' => '41219',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '8',
+      ),
+    ),
+    40 => 
+    array (
+      'action' => 'put',
+      'time' => '41718',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '9',
+      ),
+    ),
+    41 => 
+    array (
+      'action' => 'put',
+      'time' => '42342',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '10',
+      ),
+    ),
+    42 => 
+    array (
+      'action' => 'put',
+      'time' => '43106',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '11',
+      ),
+    ),
+    43 => 
+    array (
+      'action' => 'again',
+      'time' => '45150',
+    ),
+    44 => 
+    array (
+      'action' => 'put',
+      'time' => '46086',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '9',
+      ),
+    ),
+    45 => 
+    array (
+      'action' => 'put',
+      'time' => '47474',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '8',
+      ),
+    ),
+    46 => 
+    array (
+      'action' => 'put',
+      'time' => '47833',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '7',
+      ),
+    ),
+    47 => 
+    array (
+      'action' => 'put',
+      'time' => '48207',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '6',
+      ),
+    ),
+    48 => 
+    array (
+      'action' => 'put',
+      'time' => '49814',
+      'params' => 
+      array (
+        'x' => '8',
+        'y' => '6',
+      ),
+    ),
+    49 => 
+    array (
+      'action' => 'put',
+      'time' => '50376',
+      'params' => 
+      array (
+        'x' => '7',
+        'y' => '6',
+      ),
+    ),
+    50 => 
+    array (
+      'action' => 'put',
+      'time' => '50813',
+      'params' => 
+      array (
+        'x' => '10',
+        'y' => '6',
+      ),
+    ),
+    51 => 
+    array (
+      'action' => 'put',
+      'time' => '51218',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '6',
+      ),
+    ),
+    52 => 
+    array (
+      'action' => 'put',
+      'time' => '52061',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '10',
+      ),
+    ),
+    53 => 
+    array (
+      'action' => 'put',
+      'time' => '52731',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '11',
+      ),
+    ),
+    54 => 
+    array (
+      'action' => 'save',
+      'time' => '53933',
+    ),
+  ),
+  'selected' => 
+  array (
+    0 => '1',
+    1 => '2',
+    2 => '3',
+  ),
+)
+
+1389039873
+array (
+  'person' => 'name=&age=&sex=0',
+  'moves' => 
+  array (
+    0 => 
+    array (
+      'action' => 'put',
+      'time' => '717',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '9',
+      ),
+    ),
+    1 => 
+    array (
+      'action' => 'put',
+      'time' => '951',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '8',
+      ),
+    ),
+    2 => 
+    array (
+      'action' => 'put',
+      'time' => '1419',
+      'params' => 
+      array (
+        'x' => '10',
+        'y' => '8',
+      ),
+    ),
+    3 => 
+    array (
+      'action' => 'put',
+      'time' => '1763',
+      'params' => 
+      array (
+        'x' => '10',
+        'y' => '9',
+      ),
+    ),
+    4 => 
+    array (
+      'action' => 'put',
+      'time' => '2137',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '9',
+      ),
+    ),
+    5 => 
+    array (
+      'action' => 'put',
+      'time' => '2387',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '8',
+      ),
+    ),
+    6 => 
+    array (
+      'action' => 'put',
+      'time' => '2745',
+      'params' => 
+      array (
+        'x' => '10',
+        'y' => '7',
+      ),
+    ),
+    7 => 
+    array (
+      'action' => 'put',
+      'time' => '3151',
+      'params' => 
+      array (
+        'x' => '9',
+        'y' => '7',
+      ),
+    ),
+    8 => 
+    array (
+      'action' => 'put',
+      'time' => '3479',
+      'params' => 
+      array (
+        'x' => '10',
+        'y' => '6',
+      ),
+    ),
+    9 => 
+    array (
+      'action' => 'put',
+      'time' => '3915',
+      'params' => 
+      array (
+        'x' => '11',
+        'y' => '7',
+      ),
+    ),
+    10 => 
+    array (
+      'action' => 'save',
+      'time' => '5023',
+    ),
+  ),
+)
+
+

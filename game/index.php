@@ -59,7 +59,7 @@
 		<div class="main hide">
 			<div class="row">
 				<div class="game col-md-8">			
-					<div class="alert alert-info"><strong>Подсказка</strong> Начните со светло-зеленого квадрата в центре</div>	
+					<div id="tip" class="alert alert-info"><strong>Подсказка</strong> Начните со светло-зеленого квадрата в центре</div>	
 					<div class="grid">
 					</div>
 				</div>
