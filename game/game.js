@@ -20,8 +20,8 @@ function addNavigation() {
 
 Game = {
 	init: function() {
-		this.p = {size: 40, saved_width: 300, saved_size: 6, sel_width: 800, sel_size: 10};		
-		this.svg = d3.select('.grid').append('svg').attr('width', 12 * this.p.size + 10).attr('height', 12 * this.p.size + 10);
+		this.p = {size: 30, saved_width: 300, saved_size: 6, sel_width: 800, sel_size: 10};		
+		this.svg = d3.select('.grid').append('svg').attr('width', 19 * this.p.size + 10).attr('height', 19 * this.p.size + 10);
 		this.saved = d3.select('.saved').append('svg').attr('width', this.p.saved_width).attr('height', this.p.saved_width);
 		this.sel =  d3.select('.selected').append('svg').attr('width', this.p.sel_width).attr('height', 400);
 
@@ -30,8 +30,7 @@ Game = {
 		this.savedFigures = 0;		
 		this.sqLimit = 10;
 		
-		this.initMap(1);
-		this.drawGrid();
+		this.initMap();		
 		this.initPossible();
 		this.drawPossible();
 		$('.btn-save').click(function() {Game.save(); Log.add('save');});
@@ -52,22 +51,16 @@ Game = {
 		Log.init();
 	},
 
-	initMap: function(value) {
+	initMap: function() {
 		//0 - empty, 1 - possible, 2 - square
 		this.map = [];
-		for (var i = 0; i <= 11; i++) {
+		for (var i = 0; i <= 18; i++) {
 			this.map[i] = [];
-			for (var j = 0; j <=11; j++) {
-				this.map[i][j] = value;
+			for (var j = 0; j <=18; j++) {
+				this.map[i][j] = 0;
 			}
 		}
-	},
-
-	drawGrid: function() {
-		for (var i = 0; i <= 12; i++) {
-			this.svg.append('line').attr('class', 'grid').attr({x1: 5, x2: 5 + 12 * this.p.size, y1: 5 + i * this.p.size, y2: 5 + i * this.p.size});
-			this.svg.append('line').attr('class', 'grid').attr({x1: 5 + i * this.p.size, x2: 5 + i * this.p.size, y1: 5, y2: 5 + 12 * this.p.size});
-		}
+		this.map[9][9] = 1;
 	},
 
 	initPossible: function() {
@@ -89,7 +82,7 @@ Game = {
 
 	addSquare: function(i, j) {
 		if (this.firstTime) {
-			this.initMap(0);
+			this.initMap();
 			this.firstTime = false;
 		}		
 		this.map[i][j] = 2;
@@ -97,7 +90,7 @@ Game = {
 		var x, y;
 		for (var k in neigbours) {
 			x = neigbours[k][0]; y = neigbours[k][1];
-			if (x >= 0 && x <= 11 && y >= 0 && y <= 11 && this.map[x][y] == 0) {
+			if (x >= 0 && x <= 18 && y >= 0 && y <= 18 && this.map[x][y] == 0) {
 				this.map[x][y] = 1;
 			}
 		}
@@ -117,7 +110,7 @@ Game = {
 	},
 
 	drawRect: function(i, j, className) {		
-		this.svg.append('rect').attr('class', className? className : 'possible').attr({i: i, j: j}).attr({x: i * this.p.size + 5 + 2, y: j * this.p.size + 5 + 2, width: this.p.size - 3, height: this.p.size - 3});
+		this.svg.append('rect').attr('class', className? className : 'possible').attr({i: i, j: j}).attr({x: i * this.p.size + 5 + 2, y: j * this.p.size + 5 + 2, width: this.p.size - 1, height: this.p.size - 1});
 	},
 
 	drawSmallRect: function(x, y, i, j, size, svg) {
@@ -142,15 +135,34 @@ Game = {
 	},
 
 	drawSmall: function(size, width, svg, classn) {
-		var num_per_row = Math.floor(width / (14 * size));
-		var x = (this.savedFigures % num_per_row) * 14 * size; 
-		var y = Math.floor(this.savedFigures / num_per_row) * 14 * size;
+		var num_per_row = Math.floor(width / (12 * size));
+		var x = (this.savedFigures % num_per_row) * 12 * size; 
+		var y = Math.floor(this.savedFigures / num_per_row) * 12 * size;
 		var g = svg.append('g').attr('class', classn);
-		g.append('rect').attr('class', 'frame').attr({x: x, y: y, width: 12 * size + 4, height: 12 * size + 4});	
+		g.append('rect').attr('class', 'frame').attr({x: x, y: y, width: 10 * size + 4, height: 10 * size + 4});	
+
+		var x_cor = 0;
+		var y_cor = 0;
+		edges = {left: 19, right: 0, top: 19, bottom: 0}
 		for (var i in this.map) {
 			for (var j in this.map[i]) {
 				if (this.map[i][j] == 2) {
-					this.drawSmallRect(x, y, i, j, size, g);
+					if (i * 1 < edges.left) edges.left = i;
+					if (j * 1< edges.top) edges.top = j;
+					if (i * 1> edges.right) edges.right = i;
+					if (j * 1> edges.bottom) edges.bottom = j;
+					console.log([i,j]);
+				}
+			}
+		}
+
+		x_cor = edges.left - 5 + Math.floor((edges.right - edges.left + 1) / 2);
+		y_cor = edges.top - 5 + Math.floor((edges.bottom - edges.top + 1) / 2);
+		
+		for (var i in this.map) {
+			for (var j in this.map[i]) {
+				if (this.map[i][j] == 2) {
+					this.drawSmallRect(x, y, i - x_cor, j - y_cor, size, g);
 				}
 			}
 		}	

@@ -15,7 +15,7 @@ div.saved {
 }
 
 line.grid, rect.frame, rect.sel_frame {
-	stroke: #999;
+	stroke: #fff;
 	shape-rendering: crispEdges;
 }
 

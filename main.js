@@ -1,6 +1,10 @@
 $(function() {			
-	var net = initGraph();
+	var net = initGraph(5);
 	Vizard.init();
+
+	Graph.build(net);	
+	Vizard.drawGraph(Graph.convertForViz(Graph.nodes, Graph.links), Graph.figures);	
+	return;
 
 	var clusters;
 	var game;
@@ -569,9 +573,9 @@ function getClusters(segm_num, data_num) {
 	return new_clusters;
 }
 
-function initGraph() {
+function initGraph(max_level) {
 	var figures = [];
-	var max_level = 10;		
+	if (!max_level) max_level = 10;	
 	var new_level = [];
 	figures[1] = {1: new Figure([[0,0]])};
 
@@ -579,5 +583,6 @@ function initGraph() {
 		new_level = generateNewLevel(figures[i-1]);		
 		figures[i] = new_level.figures;		
 	}
+
 	return new_level;
 }

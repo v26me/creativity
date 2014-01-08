@@ -4,12 +4,12 @@ Vizard = {
 		this.svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
 	},
 
-	drawGraph: function(graph, figures) {
+	drawGraph: function(graph, figures) {		
 		var nodes = graph.nodes;
 		var links = graph.links;
 		var figures = figures;
 
-		var force = d3.layout.force().size([600, 600]).nodes(nodes).links(links).charge(-60);
+		var force = d3.layout.force().size([600, 600]).nodes(nodes).links(links).charge(-2400);
 		force.start();
 
 		for (var i=0; i<100;i++) {
